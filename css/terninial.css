@@ -1,0 +1,141 @@
+.terminal-title {
+    font-weight: bold;
+}
+
+.terminal {
+    /* background-image: url('background.png'); 
+    background-size: cover; */
+    position: relative;
+            width: 600px; /* Default width */
+            height: 400px; /* Default height */
+            border: 1px solid #333;
+            background: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+}
+/* Fullscreen or large popup styling */
+.terminal.fullscreen {
+    position: fixed;
+    top: 10%; /* Adjust as needed */
+    left: 10%; /* Adjust as needed */
+    width: 80vw; /* 80% of the viewport width */
+    height: 80vh; /* 80% of the viewport height */
+    margin: 0;
+    border: none;
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+/* Button styles */
+.button {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: #f00; /* Red for demonstration */
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.button.maximize {
+    background: #0f0; /* Green for maximize */
+}
+
+.terminal-header {
+    padding: 10px;
+    background-color: #333; /* Header background color */
+    border-radius: 5px 5px 0 0; /* Rounded corners at the top */
+    color: #f1f1f1; /* Header text color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+}
+
+.button {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: #f00; /* Red for demonstration */
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.button.close {
+    background-color: #ff5f56;
+}
+
+.button.minimize {
+    background-color: #ffbd2e;
+}
+
+.button.maximize {
+    background: #0f0; /* Green for maximize */
+}
+
+.terminal-title {
+    font-size: 14px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* Terminal body styles */
+.terminal-body {
+    padding: 15px;
+    height: 400px;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #2c2c2c;
+    color: #1ada26; /* Text color */
+    flex: 1; /* Takes up all remaining space */
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.output {
+    flex: 1; /* Takes up all available space in the terminal-body */
+    white-space: pre-wrap;
+    word-wrap: break-word; /* Scrolls if content exceeds height */
+    padding: 10px;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: #61dafb; }
+}
+.input-line {
+    display: flex;
+    align-items: center;
+    
+}
+
+.input-line .input {
+    flex-grow: 1;
+}
+.prompt {
+    margin-right: 5px;
+    color: #8abeb7;
+    font-weight: bold;
+}
+
+#input {
+    background: none;
+    border: none;
+    color: #61dafb;
+    width: 100%;
+    outline: none;
+    font-family: inherit;
+    font-size: 16px;
+}
