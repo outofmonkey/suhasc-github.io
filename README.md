@@ -1,2 +1,2 @@
-# suhasc-github.io
-Resume
+# suhasc.github.io
+
